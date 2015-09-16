@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Install homebrew
+which brew > /dev/null || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Brew doctor & brew update
+brew doctor >/dev/null
+brew update >/dev/null
+
+# Get NPM installed & updated
+which npm >/dev/null && brew upgrade npm || brew install npm
+npm install -g ember-cli
+
+# Get RVM installed & updated
+which rvm >/dev/null || \curl -sSL https://get.rvm.io | bash -s stable --ruby 2.2.3
+echo '2.2.3' > .ruby-version
+echo 'tradier' > .ruby-gemset
+
