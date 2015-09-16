@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Backtest Wizzard"
+title: "Rain Maker"
 description: ""
-category: "Backtest-Wizzard"
+category: "Rain-Maker"
 tags: []
 ---
 {% include JB/setup %}
+
