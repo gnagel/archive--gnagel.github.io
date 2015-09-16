@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="theme-color" content="#2196F3">
+        <!-- Meta Tags for SEO -->
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}">
+        <meta name="author" content="{{ site.author.name }}">
+        <!-- atom & rss feed -->
+        <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+        <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+        <!-- . -->
+        <!-- . -->
+        <!-- CSS  -->
+        <!-- . -->
+        <!-- . -->
+        <link href="/assets/themes/materializecss/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+        <link href="/assets/themes/materializecss/css/materialize.min.css" type="text/css" rel="stylesheet">
+        <link href="/assets/themes/materializecss/css/style.css" type="text/css" rel="stylesheet">
+        <!-- . -->
+        <!-- . -->
+        <!-- JS Scripts -->
+        <!-- . -->
+        <!-- . -->
+        <script src="/assets/themes/materializecss/js/modernizr.js"></script>
+        <script src="/assets/themes/materializecss/js/jquery-2.1.1.min.js"></script>
+        <script src="/assets/themes/materializecss/js/materialize.js"></script>
+        <script src="/assets/themes/materializecss/js/init.js"></script>
+        <!-- . -->
+        <!-- . -->
+        <!-- Fav and touch icons -->
+        <!-- . -->
+        <!-- . -->
+        <!-- Update these with your own images -->
+        <!--   <link rel="shortcut icon" href="images/favicon.ico"> -->
+        <!--   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+        <!--   <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> -->
+        <!--   <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+    </head>
+    <body>
+    <body id="top" class="scrollspy">
+        <!-- Pre Loader -->
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <!--Navigation-->
+        <div class="navbar-fixed">
+            <nav id="nav_f" class="default_color" role="navigation">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="{{ HOME_PATH }}" id="logo-container" class="brand-logo">Glenn Nagel</a>
+                        <ul class="right hide-on-med-and-down">
+                            {% assign pages_list = site.pages %}
+                            {% assign group = 'navigation' %}
+                            {% include JB/pages_list %}
+
+<!--
+                             <li><a href="#intro">Service</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+ -->
+                         </ul>
+                        <ul id="nav-mobile" class="side-nav">
+                            {% assign pages_list = site.pages %}
+                            {% assign group = 'navigation' %}
+                            {% include JB/pages_list %}
+<!--
+                            <li><a href="#intro">Service</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+ -->
+                        </ul>
+
+
+                        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Intro and service-->
+        <div id="contents" class="section scrollspy">
+            <div class="container">
+                <div class="row">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <footer class="page-footer default_color scrollspy" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Contact</h5>
+                        <form action="http://formspree.io/glenn+github@mercury-wireless.com" method="post">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="mdi-communication-email prefix white-text"></i>
+                                    <input id="icon_email" name="_replyto" type="email" class="validate white-text">
+                                    <label for="icon_email" class="white-text">Email</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="mdi-editor-mode-edit prefix white-text"></i>
+                                    <textarea id="icon_prefix2" name="body" class="materialize-textarea white-text"></textarea>
+                                    <label for="icon_prefix2" class="white-text">Message</label>
+                                </div>
+                                <div class="col offset-s7 s5">
+                                    <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                                    <i class="mdi-content-send right white-text"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">gnagel.github.io</h5>
+                        <ul>
+                            <li><a class="white-text" href="http://gnagel.github.io">Home</a></li>
+                            <li><a class="white-text" href="https://ctrl-alt-p.github.io">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Social</h5>
+                        <ul>
+                            <li>
+                                <a class="white-text" href="https://github.com/gnagel">
+                                    <i class="small fa fa-github-square white-text"></i> Github
+                                </a>
+                            </li>
+                            <li>
+                                <a class="white-text" href="https://www.linkedin.com/in/gnagel">
+                                    <i class="small fa fa-linkedin-square white-text"></i> Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright default_color">
+                <div class="container">
+                    Made by <a class="white-text" href="https://gnagel.github.io">Glenn Nagel</a>. Thanks to <a class="white-text" href="https://github.com/joashp/material-design-template">josh pereira</a> and <a class="white-text" href="http://materializecss.com/">materializecss</a>.
+                </div>
+            </div>
+        </footer>
+        {% include JB/analytics %}
+    </body>
+
+    </html>
