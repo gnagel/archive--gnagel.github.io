@@ -1,9 +1,7 @@
+---
+---
+
 /* Custom Stylesheet */
-/**
- *
- * Made By Joash Pereira
- * Thanks for MaterializeCSS.com
- */
 
 .default_color {
     background-color: #2196F3 !important;
@@ -79,10 +77,10 @@
 
 .card-content a {
     color: #2196F3;
-}
 
-.card-content a:hover {
-    color: #2196F3;
+    &:hover {
+        color: #2196F3;
+    }
 }
 
 #work, #team, #projects {
@@ -102,62 +100,64 @@ nav ul a {
     padding: 0px 15px;
 }
 
-.cd-headline.type .cd-words-wrapper {
-    vertical-align: top;
-    overflow: hidden;
-}
+.cd-headline.type {
+    .cd-words-wrapper {
+        vertical-align: top;
+        overflow: hidden;
 
-.cd-headline.type .cd-words-wrapper::after {
-    /* vertical bar */
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    bottom: auto;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    height: 90%;
-    width: 1px;
-    background-color: #aebcb9;
-}
+        &::after {
+            /* vertical bar */
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            bottom: auto;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            height: 90%;
+            width: 1px;
+            background-color: #aebcb9;
+        }
 
-.cd-headline.type .cd-words-wrapper.waiting::after {
-    -webkit-animation: cd-pulse 1s infinite;
-    -moz-animation: cd-pulse 1s infinite;
-    animation: cd-pulse 1s infinite;
-}
+        &.waiting::after {
+            -webkit-animation: cd-pulse 1s infinite;
+            -moz-animation: cd-pulse 1s infinite;
+            animation: cd-pulse 1s infinite;
+        }
 
-.cd-headline.type .cd-words-wrapper.selected {
-    background-color: #FFF;
-}
+        &.selected {
+            background-color: #FFF;
 
-.cd-headline.type .cd-words-wrapper.selected::after {
-    visibility: hidden;
-}
+            &::after {
+                visibility: hidden;
+            }
 
-.cd-headline.type .cd-words-wrapper.selected b {
-    color: #2196F3;
-}
+            b {
+                color: #2196F3;
+            }
+        }
+    }
 
-.cd-headline.type b {
-    visibility: hidden;
-}
+    b {
+        visibility: hidden;
 
-.cd-headline.type b.is-visible {
-    visibility: visible;
-}
+        &.is-visible {
+            visibility: visible;
+        }
+    }
 
-.cd-headline.type i {
-    position: absolute;
-    visibility: hidden;
-}
+    i {
+        position: absolute;
+        visibility: hidden;
 
-.cd-headline.type i.in {
-    position: relative;
-    visibility: visible;
+        &.in {
+            position: relative;
+            visibility: visible;
+        }
+    }
 }
 
 @-webkit-keyframes cd-pulse {
@@ -224,6 +224,7 @@ nav ul a {
 }
 
 /* Preloader */
+
 #preloader {
     position: fixed;
     top: 0;
@@ -275,31 +276,35 @@ nav a.button-collapse {
     left: -25px;
 }
 
-.card-avatar .waves-effect {
-    text-align: center;
-    margin-top: 20px;
-}
+.card-avatar {
+    .waves-effect {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-.card-avatar img {
-    height: 150px;
-    width: 150px;
-    border-radius: 75px;
-}
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+    }
 
-.card-avatar .card-content {
-    text-align: center;
+    .card-content {
+        text-align: center;
+    }
 }
 
 .card .card-content p {
     margin: 15px 0px;
 }
 
-.card-avatar .card-content i {
-    font-size: 1.5rem;
-}
+.card-avatar .card-content {
+    i {
+        font-size: 1.5rem;
+    }
 
-.card-avatar .card-content .card-title {
-    line-height: 30px !important;
+    .card-title {
+        line-height: 30px !important;
+    }
 }
 
 .parallax-container {
