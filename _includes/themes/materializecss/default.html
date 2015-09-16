@@ -39,8 +39,8 @@
         <!--   <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> -->
         <!--   <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
     </head>
-    <body>
-        <body id="top" class="scrollspy">
+    <body id="top" class="scrollspy site">
+        <header>
             <!-- Pre Loader -->
             <div id="loader-wrapper">
                 <div id="loader"></div>
@@ -76,58 +76,59 @@
                     </div>
                 </nav>
             </div>
-            <!--Intro and service-->
-            <div id="contents" class="section scrollspy">
-                <div class="container">
-                    <div class="row">
-                        {{ content }}
+        </header>
+        <!--Body contents-->
+        <div id="contents" class="section scrollspy site-content">
+            <div class="container">
+                <div class="row">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <!-- TODO: Move this to CSS file -->
+        <footer class="page-footer default_color scrollspy" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l4 s12">
+                        <h5 class="white-text">gnagel.github.io</h5>
+                        <ul>
+                            <li><a class="white-text" href="/">Home</a></li>
+                            <li><a class="white-text" href="/pages">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Social</h5>
+                        <ul>
+                            <li>
+                                <a class="white-text" href="https://github.com/gnagel">
+                                    <i class="small fa fa-github-square white-text"></i> Github
+                                </a>
+                            </li>
+                            <li>
+                                <a class="white-text" href="https://www.linkedin.com/in/gnagel">
+                                    <i class="small fa fa-linkedin-square white-text"></i> Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Credits</h5>
+                        <ul>
+                            <li class="white-text">
+                                Made by <a class="white-text" href="https://gnagel.github.io">Glenn Nagel</a> &copy; {{ site.time | date: '%Y' }}.
+                            </li>
+                            <li class="white-text">
+                                Thanks to
+                                <a class="white-text" href="https://github.com/joashp/material-design-template">josh pereira</a>,
+                                <a class="white-text" href="http://materializecss.com/">materializecss</a>, and
+                                <a class="white-text" href="http://jekyllbootstrap.com">jekyll bootstrap</a>.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!--Footer-->
-            <!-- TODO: Move this to CSS file -->
-            <footer class="page-footer default_color scrollspy" id="footer" style="position: fixed; bottom: 0; right: 0; left: 0;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l4 s12">
-                            <h5 class="white-text">gnagel.github.io</h5>
-                            <ul>
-                                <li><a class="white-text" href="/">Home</a></li>
-                                <li><a class="white-text" href="/pages">Blog</a></li>
-                            </ul>
-                        </div>
-                        <div class="col l4 s12">
-                            <h5 class="white-text">Social</h5>
-                            <ul>
-                                <li>
-                                    <a class="white-text" href="https://github.com/gnagel">
-                                        <i class="small fa fa-github-square white-text"></i> Github
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="white-text" href="https://www.linkedin.com/in/gnagel">
-                                        <i class="small fa fa-linkedin-square white-text"></i> Linkedin
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col l4 s12">
-                            <h5 class="white-text">Credits</h5>
-                            <ul>
-                                <li class="white-text">
-                                    Made by <a class="white-text" href="https://gnagel.github.io">Glenn Nagel</a> &copy; {{ site.time | date: '%Y' }}.
-                                </li>
-                                <li class="white-text">
-                                    Thanks to
-                                    <a class="white-text" href="https://github.com/joashp/material-design-template">josh pereira</a>,
-                                    <a class="white-text" href="http://materializecss.com/">materializecss</a>, and
-                                    <a class="white-text" href="http://jekyllbootstrap.com">jekyll bootstrap</a>.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            {% include JB/analytics %}
-        </body>
-    </html>
+        </footer>
+        {% include JB/analytics %}
+    </body>
+</html>
