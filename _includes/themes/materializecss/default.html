@@ -56,14 +56,18 @@
                                 <i class="fa fa-home fa-3x fa-inverse"></i>
                             </a>
                             <ul class="right hide-on-med-and-down">
-                                {% assign pages_list = site.pages %}
-                                {% assign group = 'navigation' %}
-                                {% include JB/pages_list %}
+                                <li class="active"><a href="/posts" class="active">Posts</a></li>
+                                <li><a href="/#intro">Service</a></li>
+                                <li><a href="/#work">Work</a></li>
+                                <li><a href="/#projects">Projects</a></li>
+                                <li><a href="/#contact">Contact</a></li>
                             </ul>
                             <ul id="nav-mobile" class="side-nav">
-                                {% assign pages_list = site.pages %}
-                                {% assign group = 'navigation' %}
-                                {% include JB/pages_list %}
+                                <li class="active"><a href="/posts" class="active">Posts</a></li>
+                                <li><a href="/#intro">Service</a></li>
+                                <li><a href="/#work">Work</a></li>
+                                <li><a href="/#projects">Projects</a></li>
+                                <li><a href="/#contact">Contact</a></li>
                             </ul>
                             <a href="#" data-activates="nav-mobile" class="button-collapse">
                                 <i class="mdi-navigation-menu"></i>
