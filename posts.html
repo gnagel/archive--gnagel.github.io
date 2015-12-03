@@ -6,11 +6,28 @@ group: navigation
 ---
 {% include JB/setup %}
 
-<ul>
+<div class="collection">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
+    <a class="collection-item avatar" href="{{ post.url }}">
+      <i class="material-icons circle green">
+        {%if post.material_icon %}
+          {{post.material_icon}}
+        {%else%}
+          insert_chart
+        {%endif%}
+      </i>
+
+      <span class="title">
+        {{ post.title }}
+      </span>
+
+      {% if post.tagline %}          <p>{{ post.tagline }}</p>
+      {% elsif post.description %}   <p>{{ post.description }}</p>
+      {% endif %}
+
+      <div class="secondary-content">
+        <i class="material-icons">grade</i>
+      </div>
+    </a>
   {% endfor %}
-</ul>
+</div>
