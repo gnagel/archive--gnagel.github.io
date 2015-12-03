@@ -23,13 +23,13 @@ tags: cli,ruby,rake,jekyll
         Performs a single task well
       </li>
       <li class="collection-item">
-        Has instructions in the rake description
+        Has an instructive description
       </li>
       <li class="collection-item">
         Has comments in the code
       </li>
       <li class="collection-item">
-        Finally, has a guided flow when there are multiple steps
+        If there are mutiple steps, has a guided
       </li>
     </ul>
   </section>
