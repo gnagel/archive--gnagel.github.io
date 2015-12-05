@@ -18,11 +18,11 @@ module JB
   class Path
     SOURCE = "."
     Paths = {
-      :layouts => "_layouts",
-      :themes => "_includes/themes",
-      :theme_assets => "assets/themes",
-      :theme_packages => "_theme_packages",
-      :posts => "_posts"
+      layouts:        "_layouts",
+      themes:         "_includes/themes",
+      theme_assets:   "assets/themes",
+      theme_packages: "_theme_packages",
+      posts:          "_posts"
     }
 
     def self.base
@@ -36,12 +36,26 @@ module JB
       path.compact!
       File.__send__ :join, path
     end
-
   end #Path
 end #JB
 
-# Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
-desc "Begin a new post in #{CONFIG['posts']}"
+
+#
+# rake post
+# - Creates a new post in the _posts directory
+# - See http://jekyllrb.com/docs/posts/ for more post options
+#
+# |===================================================================================|
+# | Argument            | Required | Description                                      |
+# |===================================================================================|
+# | ENV['title']        | yes      | Title of the blog post                           |
+# | ENV['tagline']      | no       | Tagline of the post (displayed under the title)  |
+# | ENV['description']  | no       | SEO Description of the post                      |
+# | ENV['category']     | no       | Category of the post, used by Jekyll             |
+# | ENV['tags']         | no       | Tags for the post, used by Jekyll                |
+# |===================================================================================|
+#
+desc('Create a new post, env arguments: title, tagline, description, category, tags(csv)')
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || "new-post"
