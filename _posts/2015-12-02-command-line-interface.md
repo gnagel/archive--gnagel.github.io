@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CLI Hackery"
-tagline: ""
+tagline: "Everyday rake commands and their woes."
 description: "A CLI (command line interface) is a user interface to a computer's operating system or an application in which the user responds to a visual prompt by typing in a command on a specified line, receives a response back from the system, and then enters another command, and so forth."
 category: "Development"
 tags: cli,ruby,rake,jekyll
@@ -9,7 +9,7 @@ tags: cli,ruby,rake,jekyll
 <div class="col s12 m9 l10">
   <section class="section scrollspy" id="basic">
     <p class="caption">
-      In the Ruby &amp; Ruby on Rails world we often interact with CLIs (<a href="https://en.wikipedia.org/wiki/Command-line_interface">command line interface</a>) in the form of rake commands.
+      In the Ruby world I often use rake with CLIs (<a href="https://en.wikipedia.org/wiki/Command-line_interface">command line interface</a>) for my day to day tasks.
       A rake command is a simple CLI that has: a description, accepts has zero or more arguments, and usually does a single task.
     </p>
 
